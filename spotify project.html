@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="spotify.css">
+  <title>Spotify</title>
+  <link rel="icon" type="image/x-icon" href="pics/logo.webp">
+  <script src="https://kit.fontawesome.com/23cecef777.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="spotify.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+      <div class="logo">
+        <a href="#">
+          <img src="pics/SpotifyLogo.png" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="fa fa-home"></span>
+              <span>Home</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="fa fa-search"></span>
+              <span>Search</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#playlistforu">
+              <span class="fa fas fa-book"></span>
+              <span>Your Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="fa fas fa-plus-square"></span>
+              <span>Create Playlist</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="fa fas fa-heart"></span>
+              <span>Liked Songs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#rep">
+              <span>On Repeat</span>
+            </a>
+          </li>
+          <li>
+            <a href="#Mood">
+              <span>Mood</span>
+            </a>
+          </li>
+          <li>
+            <button onclick="toggleMode()" style="padding: 10px 10px; border-radius: 120px;">Toggle Mode</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="policies">
+        <ul>
+          <li>
+            <a href="#">Cookies</a>
+          </li>
+          <li>
+            <a href="#">Privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="topbar">
+        <div class="prev-next-buttons">
+          <button type="button" class="fa fas fa-chevron-left"></button>
+          <button type="button" class="fa fas fa-chevron-right"></button>
+        </div>
+
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="#">Premium</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+            <li>
+              <a href="#">Download</a>
+            </li>
+            <li>
+              <a href="#">Sign Up</a>
+            </li>
+          </ul>
+          <button type="button">Log In</button>
+        </div>
+      </div>
+
+      <div class="spotify-playlists" id="Playlistforu">
+        <h2>Playlist for you</h2>
+
+        <div class="list">
+          <div class="item">
+            <img src="pics/romance.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Tamil romance</h4>
+            <p>Jimmiky ponnu on top of the...</p>
+            <audio class="audio-element" src="LEO - Ordinary Person Lyric  Thalapathy Vijay  Anirudh Ravichander  Lokesh Kanagaraj.mp3"></audio>
+          </div>
+  
+
+          <div class="item">
+            <img src="pics/song5.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Latest Tamil</h4>
+            <p>Thalaivar Alapara on top of the...</p>
+            <audio class="audio-element" src="Naa Ready (From _Leo_).m4a"></audio>
+          </div>
+  
+
+          <div class="item">
+            <img src="pics/song2.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Hot Hits</h4>
+            <p>Naa ready & Kavala are on top of the...</p>
+            <audio class="audio-element" src="03 Thamarai Poovukum.flac"></audio>
+          </div>
+  
+
+          <div class="item">
+            <img src="pics/party.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Party Time</h4>
+            <p>Pacha Elai & Fear are on top of the...</p>
+            <audio class="audio-element" src="01. Anirudh Ravichander - Ratata (From Leo).flac"></audio>
+          </div>
+  
+
+          <div class="item">
+            <img src="pics/night.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Night Melodies</h4>
+            <p>Mailanji & kokarako are on top of the...</p>
+            <audio class="audio-element" src="03 Thamarai Poovukum.flac"></audio>
+          </div>
+  
+
+          <div class="item">
+            <img src="pics/longdrive.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Long Drive</h4>
+            <p>Rasaliye & yello pullelo are on top of the...</p>
+            <audio class="audio-element" src="01. Anirudh Ravichander - Ratata (From Leo).flac"></audio>
+          </div>  
+        </div>
+      </div>
+
+      <div class="spotify-playlists">
+        <h2 id="rep">On Repeat</h2>
+        <div class="list">
+          <div class="item">
+            <img src="pics/song.jpg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+              <span class="fa fa-pause" style="display: none;"></span>
+            </div>
+            <h4>Naa Ready</h4>
+            <p>Naa ready & Kavala are on top of the...</p>
+            <audio class="audio-element" src="music/hot_hits.mp3"></audio>
+          </div>
+  
+
+          <div class="item">
+            <img src="pics/song7.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+            </div>
+            <h4>Palaanadhu Palaanadhu</h4>
+            <p>song and lyrics by Vidyasagar, Benny Dayal...</p>
+          </div>
+
+          <div class="item">
+            <img src="pics/song8.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+            </div>
+            <h4>Life of palam</h4>
+            <p>Song and lyrics by Anirudh Ravichander</p>
+          </div>
+
+          <div class="item">
+            <img src="pics/song3.jpeg" />
+            <div class="play">
+              <span class="fa fa-play"></span>
+            </div>
+            <h4>Aradya</h4>
+            <p>From Kushi.</p>
+          </div>
+
+        <div class="item">
+          <img src="pics/song4.jpeg" />
+          <div class="play">
+            <span class="fa fa-play"></span>
+          </div>
+          <h4>Jalabulajangu</h4>
+          <p>From "Don" - song and lyrics by Anirudh Ravichander, Rokesh</p>
+        </div>
+
+        <div class="item">
+          <img src="pics/vathi.jpeg" />
+          <div class="play">
+            <span class="fa fa-play"></span>
+          </div>
+          <h4>Vathi Coming</h4>
+          <p>Vathi Coming From Vijay's Master</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </body>
