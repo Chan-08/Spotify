@@ -32,3 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
 function toggleMode() {
   document.body.classList.toggle('day-mode');
 }
+
+
+
